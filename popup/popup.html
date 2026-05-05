@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="popup.css">
 </head>
-<body style="width: 300px; padding: 10px; font-family: sans-serif;">
-  <h3>Page Summarizer</h3>
-  <button id="summarizeBtn">Summarize Page</button>
-  <div id="output" style="margin-top: 15px; font-size: 14px;"></div>
+<body>
+  <div class="container">
+    <header>
+      <h2>Page Summarizer</h2>
+    </header>
+    
+    <main>
+      <button id="summarizeBtn">
+        <!-- Minimalist Sparkle/AI Icon -->
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        Summarize
+      </button>
+      
+      <div id="output" class="output-area"></div>
+    </main>
+  </div>
   
   <script src="script.js"></script>
 </body>

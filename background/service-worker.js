@@ -22,10 +22,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       
       // Map the server's response to the structure our Popup UI expects
       const formattedData = {
-        readingTime: data.readingTime,
-        bullets: data.summary, // Your server currently sends 'summary'
-        insights: "Real insights will appear here once we connect the AI API!"
-      };
+              readingTime: data.readingTime,
+              bullets: data.summary, 
+              insights: data.insights 
+            };
 
       // Send the data back to the popup!
       sendResponse({ success: true, data: formattedData });
