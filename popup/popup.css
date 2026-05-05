@@ -1,0 +1,116 @@
+/* popup/popup.css */
+
+:root {
+  /* Claude's Neutral Palette */
+  --bg-color: #ffffff;
+  --text-primary: #0f0f0f;
+  --text-secondary: #525252;
+  --border-color: #e5e5e5;
+  --btn-bg: #0f0f0f;
+  --btn-text: #ffffff;
+  --btn-hover: #2d2d2d;
+  --radius: 8px;
+  /* System UI fonts for that native, crisp look */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  width: 340px; /* Slightly wider for comfortable reading */
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  padding: 16px;
+}
+
+header {
+  margin-bottom: 16px;
+}
+
+h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+
+/* The Action Button */
+button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  padding: 10px 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+}
+
+/* The Output Text Area */
+.output-area {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.6; /* High line-height is crucial for minimalism */
+}
+
+/* Loading/Error text */
+.output-area em {
+  color: var(--text-secondary);
+  font-style: normal;
+}
+
+/* Reading Time Indicator */
+.summary-time {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Bullet Points */
+.output-area ul {
+  margin: 8px 0 16px 0;
+  padding-left: 20px;
+}
+
+.output-area li {
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+/* The Insights Box */
+.insights-section {
+  background-color: #fafafa;
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  border-radius: var(--radius);
+  margin-top: 16px;
+}
+
+.insights-section strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
