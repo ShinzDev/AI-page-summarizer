@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "AI Page Summarizer",
+  "version": "1.0.0",
+  "description": "Extracts page content and provides an AI-generated summary using AI.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon/icon128.png",
+      "48": "assets/icon/icon128.png",
+      "128": "assets/icon/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/readability.js", "content/content.js"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icon/icon128.png",
+    "48": "assets/icon/icon128.png",
+    "128": "assets/icon/icon128.png"
+  }
+}
